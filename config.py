@@ -10,7 +10,7 @@ POSTS_COLLECTION = DATABASE.posts
 USERS_COLLECTION = DATABASE.users
 SETTINGS_COLLECTION = DATABASE.settings
 
-SECRET_KEY = "7848522f-51cc-4e8c-9a37-a843c2ea1737"
+SECRET_KEY = ""
 basedir = os.path.abspath(os.path.dirname(__file__))
 secret_file = os.path.join(basedir, '.secret')
 if os.path.exists(secret_file):
