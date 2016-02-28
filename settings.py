@@ -60,6 +60,7 @@ class Settings:
             self.config['USERS_COLLECTION'].ensure_index([('date', 1)])
 
             post_data = {'title': 'Hello World!',
+                         'status': '1',
                          'preview': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod',
                          'body': 'tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
                          'tags': [],

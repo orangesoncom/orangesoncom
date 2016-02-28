@@ -87,6 +87,7 @@ def new_post():
     if request.method == 'POST':
         post_title = request.form.get('post-title').strip()
         post_full = request.form.get('post-full')
+        status = request.form.get('status')
 
         if not post_title or not post_full:
             error = True
@@ -94,6 +95,7 @@ def new_post():
             tags = cgi.escape(request.form.get('post-tags'))
             tags_array = extract_tags(tags)
             post_data = {'title': post_title,
+                         'status': status,
                          'preview': request.form.get('post-short'),
                          'body': post_full,
                          'tags': tags_array,
@@ -105,8 +107,7 @@ def new_post():
                 session[
                     'post-preview']['action'] = 'edit' if request.form.get('post-id') else 'add'
                 if request.form.get('post-id'):
-                    session[
-                        'post-preview']['redirect'] = url_for('post_edit', id=request.form.get('post-id'))
+                    session['post-preview']['redirect'] = url_for('post_edit', id=request.form.get('post-id'))
                 else:
                     session['post-preview']['redirect'] = url_for('new_post')
                 return redirect(url_for('post_preview'))
@@ -114,8 +115,7 @@ def new_post():
                 session.pop('post-preview', None)
 
                 if request.form.get('post-id'):
-                    response = postClass.edit_post(
-                        request.form['post-id'], post)
+                    response = postClass.edit_post(request.form['post-id'], post)
                     if not response['error']:
                         flash('Post updated!', 'success')
                     else:
@@ -151,7 +151,7 @@ def post_preview():
 def posts(page):
     session.pop('post-preview', None)
     skip = (page - 1) * int(app.config['PER_PAGE'])
-    posts = postClass.get_posts(int(app.config['PER_PAGE']), skip)
+    posts = postClass.get_posts_list(int(app.config['PER_PAGE']), skip)
     count = postClass.get_total_count()
     pag = pagination.Pagination(page, app.config['PER_PAGE'], count)
 

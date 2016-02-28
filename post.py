@@ -11,7 +11,8 @@ class Post:
         self.response = {'error': None, 'data': None}
         self.debug_mode = default_config['DEBUG']
 
-    def get_posts(self, limit, skip, tag=None, search=None):
+    #edit
+    def get_posts_list(self, limit, skip, tag=None, search=None):
         self.response['error'] = None
         cond = {}
         if tag is not None:
@@ -21,6 +22,49 @@ class Post:
                     {'title': {'$regex': search, '$options': 'i'}},
                     {'body': {'$regex': search, '$options': 'i'}},
                     {'preview': {'$regex': search, '$options': 'i'}}]}
+        try:
+            cursor = self.collection.find(cond).sort(
+                'date', direction=-1).skip(skip).limit(limit)
+            self.response['data'] = []
+            for post in cursor:
+                if 'tags' not in post:
+                    post['tags'] = []
+                if 'comments' not in post:
+                    post['comments'] = []
+                if 'preview' not in post:
+                    post['preview'] = ''
+
+                self.response['data'].append({'id': post['_id'],
+                                              'title': post['title'],
+                                              'status': post['status'],
+                                              'body': post['body'],
+                                              'preview': post['preview'],
+                                              'date': post['date'],
+                                              'permalink': post['permalink'],
+                                              'tags': post['tags'],
+                                              'author': post['author'],
+                                              'comments': post['comments']})
+        except Exception, e:
+            self.print_debug_info(e, self.debug_mode)
+            self.response['error'] = 'Posts not found..'
+
+        return self.response
+
+        #end edit
+
+    def get_posts(self, limit, skip, tag=None, search=None):
+        self.response['error'] = None
+        cond = {'status': '1'}
+        if tag is not None:
+            cond = {'tags': tag, 'status': '1'}
+        elif search is not None:
+            cond = {'status': '1', '$or': 
+                        [
+                            {'title': {'$regex': search, '$options': 'i'}},
+                            {'body': {'$regex': search, '$options': 'i'}},
+                            {'preview': {'$regex': search, '$options': 'i'}}                   
+                        ]
+                    }
         try:
             cursor = self.collection.find(cond).sort(
                 'date', direction=-1).skip(skip).limit(limit)
@@ -52,7 +96,7 @@ class Post:
         self.response['error'] = None
         try:
             self.response['data'] = self.collection.find_one(
-                {'permalink': permalink})
+                {'permalink': permalink, 'status': '1'})
         except Exception, e:
             self.print_debug_info(e, self.debug_mode)
             self.response['error'] = 'Post not found..'
@@ -81,12 +125,13 @@ class Post:
     def get_total_count(self, tag=None, search=None):
         cond = {}
         if tag is not None:
-            cond = {'tags': tag}
+            cond = {'tags': tag, 'status': '1'}
         elif search is not None:
             cond = {'$or': [
                     {'title': {'$regex': search, '$options': 'i'}},
                     {'body': {'$regex': search, '$options': 'i'}},
-                    {'preview': {'$regex': search, '$options': 'i'}}]}
+                    {'preview': {'$regex': search, '$options': 'i'}},
+                    {'status': '1'}]}
 
         return self.collection.find(cond).count()
 
@@ -94,6 +139,7 @@ class Post:
         self.response['error'] = None
         try:
             self.response['data'] = list(self.collection.aggregate([
+                {'$match': {'status': '1'}},
                 {'$unwind': '$tags'},
                 {'$group': {'_id': '$tags', 'count': {'$sum': 1}}},
                 {'$sort': {'count': -1}},
@@ -153,6 +199,7 @@ class Post:
         #permalink = exp.sub('', temp_title)
 
         post_data['title'] = cgi.escape(post_data['title'])
+        post_data['status'] = post_data['status']
         post_data['preview'] = cgi.escape(post_data['preview'], quote=True)
         post_data['body'] = cgi.escape(post_data['body'], quote=True)
         post_data['date'] = datetime.datetime.utcnow()
