@@ -1,0 +1,36 @@
+<section id="sidebar">
+    <section id="intro">
+        <header>
+            <h2>OrangesOncom</h2>
+        </header>
+    </section>
+    <section>
+        {%- if recent_posts -%}
+            <ul class="posts">
+                <h2>Recent Posts</h2>
+                {% for post in recent_posts %}
+                    <li>
+                        <article>
+                            <a href="{{ url_for('single_post', permalink=post['permalink']) }}">
+                                <p>
+                                    {{ post['title'] | safe }}
+                                </p>
+                            </a>
+                        </article>
+                    </li>
+
+                {% endfor %}
+            </ul>
+            <hr />
+            {%- if tags -%}
+                <h2>Top tags</h2>
+                <ul class="posts"   >
+                {% for tag in tags %}
+                    <li><a href="{{ url_for('posts_by_tag', page=1, tag=tag['title']) }}">{{ tag['title'] }} <sup class="badge">{{ tag['count'] }}</sup></a></li>
+                {% endfor %}
+                </ul>
+            {%- endif -%}
+        {%- endif -%}
+    </section>
+    {%- include 'footer.html' -%}
+</section>

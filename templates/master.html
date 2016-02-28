@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+	{%- block head -%}
+		{%- include 'head.html' -%}
+		{%- block additional_css -%}
+                	<link href="{{ url_for('static', filename='css/lightbox.css') }}" rel="stylesheet" media="screen">
+        	{%- endblock -%}
+	{%- endblock -%}
+	<body>
+		<div id="wrapper">
+			{%- block nav -%}{%- include 'nav.html' -%}{%- endblock -%}
+			<section id="menu">
+				<!-- Search -->
+					<section>
+						<form class="search" method="get" action="#">
+							<input type="text" name="query" placeholder="Search" />
+						</form>
+					</section>
+			</section>			
+			<div id="main">
+				{%- block body -%}				
+					
+				{%- endblock -%}				
+
+				{%- include 'footer.html' -%}
+			</div>
+		{%- block scripts -%}
+			{%- block additional_js -%}{%- endblock -%}
+			
+			<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+			<!--script src="{{ url_for('static', filename='js/skel.min.js') }}"></script-->
+			<script src="{{ url_for('static', filename='js/util.js') }}"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+		{%- endblock -%}
+	</body>
+</html>

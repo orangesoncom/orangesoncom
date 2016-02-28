@@ -1,0 +1,125 @@
+127.0.0.1 - - [18/Feb/2016:13:46:10 +0700] "GET /icons/openlogo-75.png HTTP/1.1" 502 172 "http://localhost/" "Mozilla/5.0 (X11; Linux x86_64; rv:38.0) Gecko/20100101 Firefox/38.0 Iceweasel/38.6.1"
+127.0.0.1 - - [18/Feb/2016:13:46:19 +0700] "GET /statix HTTP/1.1" 502 172 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:38.0) Gecko/20100101 Firefox/38.0 Iceweasel/38.6.1"
+127.0.0.1 - - [18/Feb/2016:13:46:21 +0700] "GET /static HTTP/1.1" 404 142 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:38.0) Gecko/20100101 Firefox/38.0 Iceweasel/38.6.1"
+127.0.0.1 - - [18/Feb/2016:13:46:48 +0700] "GET /static HTTP/1.1" 404 142 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:38.0) Gecko/20100101 Firefox/38.0 Iceweasel/38.6.1"
+127.0.0.1 - - [18/Feb/2016:13:46:52 +0700] "GET /icons/openlogo-75.png HTTP/1.1" 502 172 "http://localhost/" "Mozilla/5.0 (X11; Linux x86_64; rv:38.0) Gecko/20100101 Firefox/38.0 Iceweasel/38.6.1"
+127.0.0.1 - - [18/Feb/2016:13:46:53 +0700] "GET / HTTP/1.1" 502 172 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:38.0) Gecko/20100101 Firefox/38.0 Iceweasel/38.6.1"
+127.0.0.1 - - [18/Feb/2016:13:46:55 +0700] "GET / HTTP/1.1" 502 172 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:38.0) Gecko/20100101 Firefox/38.0 Iceweasel/38.6.1"
+127.0.0.1 - - [18/Feb/2016:13:46:55 +0700] "GET / HTTP/1.1" 502 172 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:38.0) Gecko/20100101 Firefox/38.0 Iceweasel/38.6.1"
+127.0.0.1 - - [18/Feb/2016:13:46:56 +0700] "GET / HTTP/1.1" 502 172 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:38.0) Gecko/20100101 Firefox/38.0 Iceweasel/38.6.1"
+127.0.0.1 - - [18/Feb/2016:13:46:56 +0700] "GET / HTTP/1.1" 502 172 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:38.0) Gecko/20100101 Firefox/38.0 Iceweasel/38.6.1"
+127.0.0.1 - - [18/Feb/2016:13:46:56 +0700] "GET / HTTP/1.1" 502 172 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:38.0) Gecko/20100101 Firefox/38.0 Iceweasel/38.6.1"
+127.0.0.1 - - [18/Feb/2016:13:46:56 +0700] "GET / HTTP/1.1" 502 172 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:38.0) Gecko/20100101 Firefox/38.0 Iceweasel/38.6.1"
+127.0.0.1 - - [18/Feb/2016:13:46:57 +0700] "GET / HTTP/1.1" 502 172 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:38.0) Gecko/20100101 Firefox/38.0 Iceweasel/38.6.1"
+127.0.0.1 - - [18/Feb/2016:13:46:57 +0700] "GET / HTTP/1.1" 502 172 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:38.0) Gecko/20100101 Firefox/38.0 Iceweasel/38.6.1"
+127.0.0.1 - - [18/Feb/2016:13:48:01 +0700] "GET / HTTP/1.1" 502 172 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:38.0) Gecko/20100101 Firefox/38.0 Iceweasel/38.6.1"
+127.0.0.1 - - [18/Feb/2016:13:48:01 +0700] "GET /favicon.ico HTTP/1.1" 502 172 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:38.0) Gecko/20100101 Firefox/38.0 Iceweasel/38.6.1"
+127.0.0.1 - - [18/Feb/2016:13:48:01 +0700] "GET /favicon.ico HTTP/1.1" 502 172 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:38.0) Gecko/20100101 Firefox/38.0 Iceweasel/38.6.1"
+127.0.0.1 - - [18/Feb/2016:13:48:02 +0700] "GET / HTTP/1.1" 502 172 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:38.0) Gecko/20100101 Firefox/38.0 Iceweasel/38.6.1"
+127.0.0.1 - - [18/Feb/2016:13:48:03 +0700] "GET / HTTP/1.1" 502 172 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:38.0) Gecko/20100101 Firefox/38.0 Iceweasel/38.6.1"
+127.0.0.1 - - [18/Feb/2016:13:48:03 +0700] "GET / HTTP/1.1" 502 172 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:38.0) Gecko/20100101 Firefox/38.0 Iceweasel/38.6.1"
+127.0.0.1 - - [18/Feb/2016:13:48:03 +0700] "GET / HTTP/1.1" 502 172 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:38.0) Gecko/20100101 Firefox/38.0 Iceweasel/38.6.1"
+127.0.0.1 - - [18/Feb/2016:13:48:03 +0700] "GET / HTTP/1.1" 502 172 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:38.0) Gecko/20100101 Firefox/38.0 Iceweasel/38.6.1"
+127.0.0.1 - - [18/Feb/2016:13:48:04 +0700] "GET / HTTP/1.1" 502 172 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:38.0) Gecko/20100101 Firefox/38.0 Iceweasel/38.6.1"
+127.0.0.1 - - [18/Feb/2016:13:48:04 +0700] "GET / HTTP/1.1" 502 172 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:38.0) Gecko/20100101 Firefox/38.0 Iceweasel/38.6.1"
+127.0.0.1 - - [18/Feb/2016:13:50:48 +0700] "GET / HTTP/1.1" 502 172 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:38.0) Gecko/20100101 Firefox/38.0 Iceweasel/38.6.1"
+127.0.0.1 - - [18/Feb/2016:13:50:48 +0700] "GET / HTTP/1.1" 502 172 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:38.0) Gecko/20100101 Firefox/38.0 Iceweasel/38.6.1"
+127.0.0.1 - - [18/Feb/2016:13:50:48 +0700] "GET / HTTP/1.1" 502 172 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:38.0) Gecko/20100101 Firefox/38.0 Iceweasel/38.6.1"
+127.0.0.1 - - [18/Feb/2016:13:50:49 +0700] "GET / HTTP/1.1" 502 172 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:38.0) Gecko/20100101 Firefox/38.0 Iceweasel/38.6.1"
+127.0.0.1 - - [18/Feb/2016:13:50:50 +0700] "GET / HTTP/1.1" 502 172 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:38.0) Gecko/20100101 Firefox/38.0 Iceweasel/38.6.1"
+127.0.0.1 - - [18/Feb/2016:13:50:51 +0700] "GET / HTTP/1.1" 502 172 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:38.0) Gecko/20100101 Firefox/38.0 Iceweasel/38.6.1"
+127.0.0.1 - - [18/Feb/2016:13:50:51 +0700] "GET / HTTP/1.1" 502 172 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:38.0) Gecko/20100101 Firefox/38.0 Iceweasel/38.6.1"
+127.0.0.1 - - [18/Feb/2016:13:50:51 +0700] "GET / HTTP/1.1" 502 172 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:38.0) Gecko/20100101 Firefox/38.0 Iceweasel/38.6.1"
+127.0.0.1 - - [18/Feb/2016:13:53:43 +0700] "GET / HTTP/1.1" 502 172 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:38.0) Gecko/20100101 Firefox/38.0 Iceweasel/38.6.1"
+127.0.0.1 - - [18/Feb/2016:13:53:43 +0700] "GET / HTTP/1.1" 502 172 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:38.0) Gecko/20100101 Firefox/38.0 Iceweasel/38.6.1"
+127.0.0.1 - - [18/Feb/2016:13:53:45 +0700] "GET / HTTP/1.1" 502 172 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:38.0) Gecko/20100101 Firefox/38.0 Iceweasel/38.6.1"
+127.0.0.1 - - [18/Feb/2016:13:54:49 +0700] "GET / HTTP/1.1" 502 172 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:38.0) Gecko/20100101 Firefox/38.0 Iceweasel/38.6.1"
+127.0.0.1 - - [18/Feb/2016:13:57:18 +0700] "GET / HTTP/1.1" 502 172 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:38.0) Gecko/20100101 Firefox/38.0 Iceweasel/38.6.1"
+127.0.0.1 - - [18/Feb/2016:13:57:19 +0700] "GET / HTTP/1.1" 502 172 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:38.0) Gecko/20100101 Firefox/38.0 Iceweasel/38.6.1"
+Exception on /post/3U4LE1EDPX7T [GET]
+Traceback (most recent call last):
+  File "/home/hendisap/projects/Oranges/env/local/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/hendisap/projects/Oranges/env/local/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/hendisap/projects/Oranges/env/local/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/hendisap/projects/Oranges/env/local/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/hendisap/projects/Oranges/env/local/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/hendisap/projects/Oranges/flask-blog/web.py", line 53, in single_post
+    if not post['data']:
+  File "/home/hendisap/projects/Oranges/env/local/lib/python2.7/site-packages/flask/templating.py", line 128, in render_template
+    context, ctx.app)
+  File "/home/hendisap/projects/Oranges/env/local/lib/python2.7/site-packages/flask/templating.py", line 110, in _render
+    rv = template.render(context)
+  File "/home/hendisap/projects/Oranges/env/local/lib/python2.7/site-packages/jinja2/environment.py", line 989, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/home/hendisap/projects/Oranges/env/local/lib/python2.7/site-packages/jinja2/environment.py", line 754, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/hendisap/projects/Oranges/flask-blog/templates/single_post.html", line 1, in top-level template code
+    {%- extends 'master.html' -%}
+  File "/home/hendisap/projects/Oranges/flask-blog/templates/master.html", line 16, in top-level template code
+    {%- block body -%}
+  File "/home/hendisap/projects/Oranges/flask-blog/templates/single_post.html", line 42, in block "body"
+    {{ disqus_dev() }}
+UndefinedError: 'disqus_dev' is undefined
+Exception on /post/3U4LE1EDPX7T [GET]
+Traceback (most recent call last):
+  File "/home/hendisap/projects/Oranges/env/local/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/hendisap/projects/Oranges/env/local/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/hendisap/projects/Oranges/env/local/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/hendisap/projects/Oranges/env/local/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/hendisap/projects/Oranges/env/local/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/hendisap/projects/Oranges/flask-blog/web.py", line 53, in single_post
+    if not post['data']:
+  File "/home/hendisap/projects/Oranges/env/local/lib/python2.7/site-packages/flask/templating.py", line 128, in render_template
+    context, ctx.app)
+  File "/home/hendisap/projects/Oranges/env/local/lib/python2.7/site-packages/flask/templating.py", line 110, in _render
+    rv = template.render(context)
+  File "/home/hendisap/projects/Oranges/env/local/lib/python2.7/site-packages/jinja2/environment.py", line 989, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/home/hendisap/projects/Oranges/env/local/lib/python2.7/site-packages/jinja2/environment.py", line 754, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/hendisap/projects/Oranges/flask-blog/templates/single_post.html", line 1, in top-level template code
+    {%- extends 'master.html' -%}
+  File "/home/hendisap/projects/Oranges/flask-blog/templates/master.html", line 16, in top-level template code
+    {%- block body -%}
+  File "/home/hendisap/projects/Oranges/flask-blog/templates/single_post.html", line 42, in block "body"
+    {{ disqus_dev() }}
+UndefinedError: 'disqus_dev' is undefined
+Exception on /post/3U4LE1EDPX7T [GET]
+Traceback (most recent call last):
+  File "/home/hendisap/projects/Oranges/env/local/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/hendisap/projects/Oranges/env/local/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/hendisap/projects/Oranges/env/local/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/hendisap/projects/Oranges/env/local/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/hendisap/projects/Oranges/env/local/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/hendisap/projects/Oranges/flask-blog/web.py", line 53, in single_post
+    if not post['data']:
+  File "/home/hendisap/projects/Oranges/env/local/lib/python2.7/site-packages/flask/templating.py", line 128, in render_template
+    context, ctx.app)
+  File "/home/hendisap/projects/Oranges/env/local/lib/python2.7/site-packages/flask/templating.py", line 110, in _render
+    rv = template.render(context)
+  File "/home/hendisap/projects/Oranges/env/local/lib/python2.7/site-packages/jinja2/environment.py", line 989, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/home/hendisap/projects/Oranges/env/local/lib/python2.7/site-packages/jinja2/environment.py", line 754, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/hendisap/projects/Oranges/flask-blog/templates/single_post.html", line 1, in top-level template code
+    {%- extends 'master.html' -%}
+  File "/home/hendisap/projects/Oranges/flask-blog/templates/master.html", line 16, in top-level template code
+    {%- block body -%}
+  File "/home/hendisap/projects/Oranges/flask-blog/templates/single_post.html", line 42, in block "body"
+    {{ disqus_dev() }}
+UndefinedError: 'disqus_dev' is undefined

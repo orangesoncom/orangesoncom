@@ -1,0 +1,30 @@
+{%- extends 'master.html' -%}
+{%- block head -%}{%- include 'head.html' -%}{%- block additional_css -%}<link href="{{ url_for('static', filename='css/lightbox.css') }}" rel="stylesheet" media="screen">{%- endblock -%}{%- endblock -%}
+{%- block body -%}
+	<article class="post">
+		<section>
+			<h3>About</h3>
+			<p>
+				<i>Assalamu’alaikum warahmatullahi wabarakatuh.</i><br /><br />
+
+				Perkenalkan nama saya Hendi Saputra, seorang laki-laki biasa yang hidup normal dan di besarkan di keluarga yang sederhana dan bersahaja.<br />
+
+				Situs ini adalah milik pribadi dan didirikan sebagai media belajar sekaligus arsip dari tulisan-tulisan yang akan dibuat, semua posting yang ada di situs ini bebas untuk disebar luaskan kembali baik secara keseluruhan maupun sebagian, dengan meminta izin maupun tanpa izin dari saya, yang terpenting menuliskan sumbernya.<br /><br />
+
+				Rencananya bahasan utama dari situs ini adalah tentang komputer, karena saya sendiri sedang punya ketertarikan pada bidang ini (<i>biasanya kurang tertarik</i>), Oiya di situs ini untuk sementara tidak terdapat fasilitas komentar (<i>karena saya belum bisa mengintegrasikanya</i>),
+				<strike>rencananya nanti akan di integrasikan dengan <a href="https://disqus.com/">disqus</a>.</strike><br/>
+				Situs ini masih dalam tahap pengembangan, jika menemukan kesalahan pada situs ini mohon informasikan pada saya :D<br /><br />
+
+				Semoga Situs ini bisa bermanfaat khususnya untuk saya sendiri maupun pembaca yang mungkin ketemmu situs ini.<br/>
+				<b>Terima Kasih</b>
+			</p>
+		</section>
+	</article>
+{%- endblock -%}
+{%- block additional_js -%}
+	<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/lightbox-2.6.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/skel.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/util.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/custom.js') }}"></script>
+{%- endblock -%}

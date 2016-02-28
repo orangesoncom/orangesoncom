@@ -1,0 +1,6 @@
+flask==0.10.1
+flask-markdown
+pymongo==3.0.3
+gunicorn
+itsdangerous==0.24
+MarkupSafe==0.23

@@ -1,0 +1,77 @@
+{%- extends 'master.html' -%}
+
+{%- block body -%}
+    <div class="clearfix">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="page-header">
+                    <h1>Upload File</h1>
+                </div>
+                <div class="content">
+                    {%- with messages = get_flashed_messages(with_categories=True) -%}
+                        {%- if messages -%}
+                            {%- for category, message in messages -%}
+                                <div class="response">
+                                    <span class="message {{ category }}">{%- if category == 'success' -%}✔{%- endif -%}&nbsp;{{ message }}</span>
+                                </div>
+                            {%- endfor -%}
+                        {%- endif -%}
+                    {%- endwith -%}
+                    <form class="form-user" role="form" method="post" enctype="multipart/form-data">
+                        <div class="form-group {% if error and error_type == 'validate' %}has-error{% endif %}">
+                            {%- if error and error_type == 'validate' -%}
+                                <label class="control-label" for="file[]">Required field</label>
+                            {%- endif -%}
+                            <span class="fileinput-filename"><input type="file" class="fileinput-new" name="file[]" id="file[]" required multiple></span>
+                        </div>
+                        <div class="form-group">
+                            <input name="_csrf_token" type="hidden" value="{{ csrf_token() }}">
+                            <input type="submit" class="btn btn-primary" value="Submit">
+                        </div>
+                    </form>
+                    <br>
+                    <p><b>List of files</b></p>
+                    <table border="1" style="border-collapse:collapse" width="800"><tbody>
+                    {% if user.fetch_files() %}
+                        {% for file in user.fetch_files() %}
+                          <tr><td width="400">
+			  <a href="{{ url_for('static', filename='files/' ) }}{{ file }}" title="{{ file }}" data-lightbox="{{ url_for('static', filename='files/' ) }}{{ file }}" >
+                         
+			{{ file }}
+			  </a>
+                          </td><td> 
+                          <form action="/delete-file/{{ file }}" method="post"> 
+                            <input name="_csrf_token" type="hidden" value="{{ csrf_token() }}">
+                            <input type="submit" name="remove" value="Remove"> 
+
+                        </form> </td></tr>
+                        {% endfor %}
+                    {% else %}
+                        <tr><td colspan="2">No uploaded file found.</td></tr>
+                    {% endif %}
+                    </tbody></table>
+                    <br>
+                    {% if responses %}
+                        <p><b>Upload Results:-</b></p>
+                        <ol>
+                        {% for response in responses %}
+                            {% if responses[response]==1 %}
+                                <li>The file <strong>{{ response }}</strong> has been uploaded successfully.</li>
+                            {% else %}
+                                <li>The file <strong>{{ response }}</strong> couldn't be uploaded as this file extension is not allowed.</li>
+                            {% endif %}
+                        {% endfor %}
+                        </ol>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+{%- endblock -%}
+{%- block additional_js -%}
+    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/lightbox-2.6.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/skel.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/util.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/custom.js') }}"></script>
+{%- endblock -%}
