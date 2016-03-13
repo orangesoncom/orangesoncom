@@ -243,8 +243,8 @@ def about():
 @app.route('/add_user')
 @login_required()
 def add_user():
-    gravatar_url = userClass.get_gravatar_link()
-    return render_template('add_user.html', gravatar_url=gravatar_url, meta_title='Add user')
+    #gravatar_url = userClass.get_gravatar_link()
+    return render_template('add_user.html', meta_title='Add user')
 
 
 @app.route('/edit_user?id=<id>')

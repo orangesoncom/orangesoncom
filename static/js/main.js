@@ -1,4 +1,5 @@
 window.MDM_SILENT = true;
+
 $(function(){
     $('a[data-target="_blank"]').attr('target', '_blank');
 
@@ -7,7 +8,7 @@ $(function(){
         $('#post-full').mdmagick();
     }
 
-    $('.post .article img').each(function(index, el){
+    $('.post img').each(function(index, el){
         var anchor = '<a href="'+$(el).attr('src')+'" title="'+$(el).attr('alt')+'" data-lightbox="'+$(el).attr('src')+'"><img src="'+$(el).attr('src')+'" alt="'+$(el).attr('alt')+'"></a>';
         $(el).replaceWith(anchor);
     });

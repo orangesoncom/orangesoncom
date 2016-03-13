@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-	{%- block head -%}{%- include 'head.html' -%}{%- endblock -%}
+	{%- block head -%}
+		{%- include 'head.html' -%}
+	{%- endblock -%}
 	<body>
 		<div id="wrapper">
 			{%- block nav -%}
 				{%- include 'nav.html' -%}
 			{%- endblock -%}
 			<section id="menu">
-				<!-- Search -->
-					<section>
-						<form class="search" method="get" action="#">
-							<input type="text" name="query" placeholder="Search" />
-						</form>
-					</section>
+				<section>
+					<form class="search" method="get" action="#">
+						<input type="text" name="query" placeholder="Search" />
+					</form>
+				</section>
 			</section>			
 			<div id="main">
 				{%- block body -%}
@@ -27,21 +28,18 @@
 									</div>
 									<div class="meta">
 										
-										<time class="published" datetime="{{ post['date'] |formatdate }}">{{ post['date'] |formatdate }}</time>
+										<time class="published">{{ post['date'] |formatdate }}</time>
 										<span class="name">{{ post['author'] }}</span>						
 									</div>
 									
-								</header>
-								<p>
-									{%- if post['preview'] -%}
-										{{ post['preview']|markdown }}
-									{%- else -%}
-										{{ post['body']|markdown }}
-									{%- endif -%}
-								</p>
+								</header>								
+								{%- if post['preview'] -%}
+									{{ post['preview']|markdown }}
+								{%- else -%}
+									{{ post['body']|markdown }}
+								{%- endif -%}								
 								<footer>
-									<ul class="stats">
-										
+									<ul class="stats">										
 										{%- if post['tags'] -%}
 											{%- for tag in post['tags'] -%}
 												<li>
@@ -54,13 +52,9 @@
 							</article>
 						{%- endfor -%}
 					{% else %}
-						<div class="post clearfix">
-							<div class="row">
-								<div class="col-lg-8">
-									<div class="page-header">
-										<h1>Posts not found..</h1>
-									</div>
-								</div>
+						<div class="post">
+							<div class="title">
+								<h1>Posts not found..</h1>									
 							</div>
 						</div>
 					{%- endif -%}
@@ -88,10 +82,7 @@
 		</div>
 		
 		{%- block scripts -%}
-			<!--script src="//codeorigin.jquery.com/jquery-2.0.3.min.js"></script>
-			<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script-->
-			{%- block additional_js -%}{%- endblock -%}
-			
+			{%- block additional_js -%}{%- endblock -%}			
 			<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
 			<script src="{{ url_for('static', filename='js/skel.min.js') }}"></script>
 			<script src="{{ url_for('static', filename='js/util.js') }}"></script>

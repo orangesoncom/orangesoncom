@@ -1,49 +1,43 @@
 {%- extends 'master.html' -%}
 
 {%- block body -%}
-	<div class="post">
-		<div class="row">
-			<div class="col-lg-12">
-				{%- if users -%}
-					<div class="page-header">
-						<h1>Users</h1>
-					</div>
-					<div class="content">
-						{%- with messages = get_flashed_messages(with_categories=True) -%}
-		                    {%- if messages -%}
-		                        {%- for category, message in messages -%}
-		                            <div class="response">
-		                                <span class="message {{ category }}">{%- if category == 'success' -%}✔{%- endif -%}&nbsp;{{ message }}</span>
-		                            </div>
-		                        {%- endfor -%}
-		                    {%- endif -%}
-		                {%- endwith -%}
-						<a href="{{ url_for('add_user') }}" class="response btn btn-primary">Add User</a>
-						<table class="table table-striped">
-							<tr>
-								<th>Username</th>
-								<th>Email</th>
-								<th>Registration Date</th>
-								<th>Action</th>
-							</tr>
-							{%- for user in users -%}
-							<tr>
-								<td><a title="Username" href="{{ url_for('edit_user', id=user['id']) }}" data-target="_blank">{{ user['id'] }}</a></td>
-								<td>{{ user['email'] }}</td>
-								<td>{{ user['date'] |formatdate }}</td>
-								<td><a title="Edit" href="{{ url_for('edit_user', id=user['id']) }}" class="fa fa-pencil"></a>{%- if user['id'] != session['user']['username'] -%}&nbsp;&nbsp;<a title="Delete" href="{{ url_for('delete_user', id=user['id']) }}" class="fa fa-times"></a>{%- endif -%}</td>
-							</tr>
-							{%- endfor -%}
-						</table>
-					</div>
-				{%- endif -%}
-		    </div>
-		</div>
-	</div>
-{%- endblock -%}
-{%- block additional_js -%}
-    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/skel.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/util.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/custom.js') }}"></script>
+	<article class="post">
+		<section>
+			<h1>Users</h1>
+			{%- with messages = get_flashed_messages(with_categories=True) -%}
+                {%- if messages -%}
+                    {%- for category, message in messages -%}
+                        <div class="response">
+                            <span class="message {{ category }}">{%- if category == 'success' -%}✔{%- endif -%}&nbsp;{{ message }}</span>
+                        </div>
+                    {%- endfor -%}
+                {%- endif -%}
+            {%- endwith -%}
+            <ul class="actions">
+            	<li><a href="{{ url_for('add_user') }}" class="button fit small">Add new</a></li>
+        	</ul>
+        	<div class="table-wrapper">
+        		<table>
+        			<thead>
+        				<tr>
+        					<th>Username</th>
+							<th>Email</th>
+							<th>Registration Date</th>
+							<th>Action</th>
+        				</tr>
+        			</thead>
+        			<tbody>
+        				{%- for user in users -%}
+						<tr>
+							<td><a title="Username" href="{{ url_for('edit_user', id=user['id']) }}" data-target="_blank">{{ user['id'] }}</a></td>
+							<td>{{ user['email'] }}</td>
+							<td>{{ user['date'] |formatdate }}</td>
+							<td><a title="Edit" href="{{ url_for('edit_user', id=user['id']) }}" class="fa fa-pencil"></a>{%- if user['id'] != session['user']['username'] -%}&nbsp;&nbsp;<a title="Delete" href="{{ url_for('delete_user', id=user['id']) }}" class="fa fa-times"></a>{%- endif -%}</td>
+						</tr>
+						{%- endfor -%}
+        			</tbody>
+        		</table>
+        	</div>
+		</section>
+	</article>
 {%- endblock -%}
