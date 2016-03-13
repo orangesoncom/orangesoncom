@@ -1,4 +1,7 @@
 .secret
 .secret
 *.pyc
-/config.py
+config.py
+config.py
+app.log
+app.log
