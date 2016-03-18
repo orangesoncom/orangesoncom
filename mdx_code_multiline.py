@@ -14,7 +14,7 @@ class MultilineCodeExtension(Extension):
 class NestedElements(Pattern):
     def handleMatch(self, m):
         el1 = etree.Element('pre')
-        el2 = etree.SubElement(el1, 'cite')
+        el2 = etree.SubElement(el1, 'code')
         el2.text = m.group(2).strip()
         return el1
 

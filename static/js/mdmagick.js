@@ -34,7 +34,7 @@ function MDM( inputElement ) {
 
   this.activateControls = function( controlsElement ){
     var _self = this;
-    ["bold", "italic", "link", "title", "list", "quote", "code", "multilineCode", "img", "strike", "gist"].forEach( function( actionName ){
+    ["bold", "italic", "link", "title", "list", "quote", "code", "multilineCode", "img", "strike"].forEach( function( actionName ){
       $( controlsElement ).find( ".mdm-" + actionName ).click( function( event ){ _self.action( actionName, event ) } );
     });
   };
@@ -155,7 +155,7 @@ MDM.Actions = {
   multilineCode: function( inputElement ){
     var selection = $( inputElement ).getSelection();
     //TODO: cut all empty lines from selection.text
-    $( inputElement ).replaceSelection( "[code]\n" + selection.text + "\n[/code]" );
+    $( inputElement ).replaceSelection( "~~~~\n" + selection.text + "\n~~~~" );
   },
 
   img: function( inputElement ){
@@ -172,20 +172,6 @@ MDM.Actions = {
 
         $( inputElement ).replaceSelection( "![" + selection.text + "](" + link + ")" );
         $( inputElement ).setSelection(selection.start + 2, selection.end + 2); //select description text
-    }
-  },
-
-  gist: function( inputElement ){
-    var string = prompt( "GitHub Gist ID", "" );
-    if(string) {
-        var selection = $( inputElement ).getSelection();
-        var objectValue = $(inputElement).val();
-        if(!selection.text){
-            $(inputElement).val(objectValue + "\n" + 'link description');
-            $(inputElement).setCaretPos(-1);
-            MDM.Utils.selectWholeLines( inputElement );
-        }
-        $( inputElement ).replaceSelection( "\n[gist]" + string + "[/gist]\n" );
     }
   }
 }
@@ -241,8 +227,7 @@ MDM.Utils = {
       "    <li class=\"mdm-multilineCode\"><a tabindex=\"-1\" title=\"multiline-code\" class=\"fa fa-terminal\" href=\"#mdm-multilineCode\"><span>MLC</span></a></li>" +
       "    <li class=\"mdm-list\"><a tabindex=\"-1\" title=\"list\" class=\"fa fa-list-ul\" href=\"#mdm-list\"><span>l</span></a></li>" +
       "    <li class=\"mdm-link\"><a tabindex=\"-1\" title=\"link\" class=\"fa fa-link\" href=\"#mdm-link\"><span>a</span></a></li>" +
-      "    <li class=\"mdm-img\"><a tabindex=\"-1\" title=\"img\" class=\"fa fa-picture-o\" href=\"#mdm-img\"><span>Img</span></a></li>" +
-      "    <li class=\"mdm-gist\"><a tabindex=\"-1\" title=\"GitHub Gist\" class=\"fa fa-github bigger\" href=\"#mdm-gist\"><span>G</span></a></li>" +
+      "    <li class=\"mdm-img\"><a tabindex=\"-1\" title=\"img\" class=\"fa fa-picture-o\" href=\"#mdm-img\"><span>Img</span></a></li>" +      
       "  </ul>" +
       "</div>";
 

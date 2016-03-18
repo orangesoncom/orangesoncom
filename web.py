@@ -2,7 +2,7 @@ import cgi
 import os
 from flask import Flask, render_template, abort, url_for, request, flash, session, redirect
 from flaskext.markdown import Markdown
-from mdx_github_gists import GitHubGistExtension
+#from mdx_github_gists import GitHubGistExtension
 from mdx_strike import StrikeExtension
 from mdx_quote import QuoteExtension
 from mdx_code_multiline import MultilineCodeExtension
@@ -15,8 +15,8 @@ from helper_functions import *
 from werkzeug import secure_filename
 
 app = Flask('OrangesOncom')
-md = Markdown(app)
-md.register_extension(GitHubGistExtension)
+md = Markdown(app, extensions=['fenced_code'], output_format='html5',)
+#md.register_extension(GitHubGistExtension)
 md.register_extension(StrikeExtension)
 md.register_extension(QuoteExtension)
 md.register_extension(MultilineCodeExtension)
